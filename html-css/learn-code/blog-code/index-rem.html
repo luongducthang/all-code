@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ sử dụng đơn vị % #1</title>
+<style>
+
+/* Con số 62.5% là gì?
+Mặc định font-size của thẻ html là 16px - tương ứng với 100%. Khi ấy, 1rem sẽ bằng 16px. Vậy khi muốn đặt font-size tương ứng với 10px thì ta sẽ đặt bằng bao nhiêu rem?
+
+Đương nhiên, theo mặc định 10px đổi sang rem sẽ là 10/16 = 0.625, như vậy để CSS bằng đơn vị rem ra được kích cỡ tương ứng 10px ta sẽ CSS là font-size: 0.625rem.
+
+👉 Vì vậy, chúng ta có thể quy đổi tỉ lệ tại thẻ html với CSS font-size: 62.5%. Kết quả thu được, 1rem = 10px, 1.6rem = 16px, 2rem = 20px, 2.4rem = 24px. */
+
+    html {
+    font-size: 62.5%;
+}
+
+#heading {
+    font-size: 2rem;
+}
+
+.sub-heading {
+    font-size: 2rem;
+}
+
+.text, ol li { 
+    font-size: 1rem;
+}
+</style>
+</head>
+<body>
+
+<div>
+<h1 id="heading">Tại sao nên thêm rel="noopener" khi sử dụng target="_blank"?</h1>
+<p class="text">
+    Như chúng ta đã biết, sử dụng target="_blank" cho thẻ a thì khi người dùng click vào liên kết trình duyệt sẽ mở trên một tab mới, thường là do liên kết trong thẻ a dẫn tới một website khác và chúng ta không muốn người dùng rời khỏi website của mình.
+</p>
+
+<h2 class="sub-heading">Vấn đề là gì?</h2>
+<p class="text">Với cách làm trên có 2 vấn đề về bảo mật và hiệu suất:</p>
+
+<ol>
+    <li>Tại trang đích có thể sử dụng window.opener để kiểm soát được cửa sổ trang gốc của chúng ta, ví dụ chạy window.opener.location.href = 'https://fullstack.edu.vn/' là có thể chuyển hướng cửa sổ gốc tới https://fullstack.edu.vn/. Hãy tưởng tượng bạn bị chuyển tới một URL có nội dung “độc hại” như 18+ (khi ngồi cạnh người yêu), hay các trang giả mạo để đánh cắp tài khoản ngân hàng, thông tin cá nhân, v.v…</li>
+    <li>Trang đích chạy cùng tiến trình xử lý Javascript với trang gốc, nếu trang đích sử dụng nhiều logic “nặng” hoặc tối ưu chưa tốt về mặt hiệu năng có thể làm ảnh hưởng tới trang web của bạn đang được mở tại cửa sổ gốc.</li>
+</ol>
+
+<h2 class="sub-heading">Khắc phục thế nào?</h2>
+<p class="text">Để khắc phục vấn đề trên, bạn hãy thêm rel="noopener" vào toàn bộ các thẻ a có target="_blank" nhé.</p>
+<p class="text">Tham khảo: <a href="https://web.dev/external-anchors-use-rel-noopener">https://web.dev/external-anchors-use-rel-noopener</a></p>
+</div>
+    
+</body>
+</html>

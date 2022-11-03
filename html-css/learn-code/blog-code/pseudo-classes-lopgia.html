@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>lớp giả</title>
+    <style>
+        /* :root là lớp dựa phần tử html */
+        /* :hover là hiệu ứng khi di chuột vào */
+        /* :active là hàm đổi màu khi bấm vào  */
+        /* :first-child là hàm lấy phần tủ đầu tiên */
+        /* :last-child là hàm lấy phần tủ cuối */
+        :root{
+            --taobien:red;
+        }
+
+        .box-1{
+            height: 100%;
+            width: 100%;
+            color: var(--taobien);
+        }
+        .box-2:hover{
+            color: blue;
+        }
+        .box-3:active{
+            color: aqua;
+        }
+
+        li:first-child{
+            color: rgb(138, 241, 128);
+            font-size: 30px;
+        }
+        li:last-child{
+            color: rgb(128, 237, 241);
+            font-size: 50px;
+        }
+
+    </style>
+    <body>
+        <div class="parent-1">
+    <div class="box-1">BOX 1</div>
+</div>
+<div class="parent-2">
+    <div class="box-2">BOX 2</div>
+</div>
+<div class="parent-3">
+    <div class="box-3">BOX 3</div>
+</div>
+<ul>
+    <li>phần tử 1</li>
+    <li>phần tử 2</li>
+    <li>phần tử 3</li>
+    <li>phần tử 4</li>
+    <li>phần tử 5</li>
+</ul>
+    </body>
+    </html>

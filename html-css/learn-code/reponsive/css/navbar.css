@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background-color: #333;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 48px;
+}
+
+/* Article */
+h1 {
+    line-height: 2rem;
+}
+
+article {
+    padding: 0 16px;
+    line-height: 1.6rem;
+}
+
+article img {
+    width: 640px;
+    max-width: 100%;
+    display: block;
+    margin: 32px auto;
+}
+
+
+/* css MOBILE */
+
+.nav__bars-btn{
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #fff;
+    /* display: none; */
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: faceIn linear 0.2s;
+}
+
+.nav__mobile{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 320px;
+max-width: 100%;  /*  trường hợp hợp có màn hình nhỏ hơn 320px thì sẽ tự co đúng 320px  */
+background-color: #fff;
+transform: translateX(-100%);
+transition: transform linear 0.2s , opacity linear 0.2s; /* transtion để định nghĩa sử dụng animation cho thuộc tính gì (transform có hỗ trợ animation rồi nên định nghĩa luôn) */
+/* all linear dùng trên tất cả các thuộc tính có animation */
+opacity: 0;
+}
+
+.nav__mobile-list{
+margin-top: 30px;
+}
+
+.nav__mobile-link{
+font-size: 1.5rem;
+color: #000;
+text-decoration: none;
+padding: 8px 0;
+}
+
+.nav__mobile-close{
+    font-size: 30px;
+    text-align: center;
+    padding: 8px 10px;
+    color: #666;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+}
+
+.nav__input{
+    display: none;
+}
+
+.nav__input:checked ~ .nav__overlay{
+    display: block;
+}
+
+.nav__input:checked ~ .nav__mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+
+@keyframes faceIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* MOBIE */
+
+@media (max-width:1023px){
+    .nav__bars-btn{
+        display: block;
+    }
+    .nav__pc{
+        display: none;
+    }
+
+    
+}

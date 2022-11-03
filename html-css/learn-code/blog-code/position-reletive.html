@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+        .deg{
+            position: relative;
+            /* relative là lấy chính mình là gốc toạ dộ không phụ thuộc */
+            /* top: 100px;
+            left: 100px; */
+            height: 200px;
+            width: 100%;
+            background: rgb(228, 204, 204);
+            position: relative;
+        }
+        .trong{
+          /* đè và nhìn xuyên */ 
+          /* absolute là thừa hưởng và phụ thuộc tất cả css của thẻ ngoài ngần nhất */
+            position: absolute;
+            background: rgba(206, 163, 83, 0.5);
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+        .be{
+            position: absolute;
+            background: rgb(83, 81, 76);
+            height: 50px;
+            width: 50px;
+        }
+        .fixed{
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            background: black;
+            
+        }
+        body{
+            height: 3000px;
+        }
+    </style>
+    <body>
+        <div class="fixed"></div>
+        <!-- thẻ trong sẽ tìm thẻ nào có position gần nhất để làm gốc toạ độ -->
+        <div class="deg">
+        <div class="trong">he lo 
+            <div class="be"></div>
+        </div>
+    </div>
+    
+    <!-- <ul>
+        <li>danh sách</li>
+        <li>danh sách</li>
+        <li>danh sách</li>
+        <li>danh sách</li>
+        <li>danh sách</li>
+    </ul> -->
+    </body>
+    </html>

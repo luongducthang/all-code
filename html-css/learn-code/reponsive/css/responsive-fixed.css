@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+.main{
+display: flex;
+padding: 0 30px;
+}
+
+.sidebar{
+width: 300px;
+background-color: rgb(160, 153, 153);
+
+}
+
+.content{
+flex: 1; /* để item chiếm hết màn hình */
+
+/* width:calc(100% - 300px); */
+
+}
+
+.item{
+    min-height:180px;
+    line-height: 180px;
+    background-color: orange;
+    margin-top:20px ;
+    text-align: center;
+}
+
+/* table */
+@media (min-width:740px) and (max-width:1023px){
+    .hide-on-table{
+        display: none;
+    }
+}
+
+
+/* mobile */
+@media (max-width:740px){
+    .hide-on-table{
+        display: none;
+    }
+}

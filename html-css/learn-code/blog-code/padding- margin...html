@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>css các kiểu đẩy</title>
+    <style>
+        *{
+            width:50px;
+            height: 50px;
+        }
+        .padding{
+           /* float: left;  là làm các div nằm ngang */
+            margin: 15px 15px 15px 15px;
+        }
+        /* .padding là css đẩy từ trong ra làm giầy lên */
+        .padding1{
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            padding: 20px 15px 10px 5px; 
+           
+            /* viết ngắn gọn các cạnh theo chiều kim đồng hồ  */
+        }
+        .padding2{
+            background-color: red;
+            padding: 10px;
+            border-width: 5px;
+            border-style: solid; /* solid là mặc định 4 cạnh là 2px */
+            border-color:yellow ;
+            border-top:10px  solid yellowgreen;
+            /* muốn mất cạnh nào thì phải xét border cho cạnh đó bằng 0  */
+        }
+ 
+        .padding3{
+            /* theo thiết kế 100x100  */
+            /* khi thêm padding, border, thì kích thước sẽ tăng á với thiết kế */
+            /* theo thủ công nếu muốn bằng với thiết kê width,height thì phải trừ tổng 2 cạnh padding,border */
+            /* box-sizing: border-box; là tự động tính toán để trừ padding,border đúng với thiết kế (padding,border không được lơn á) */
+            /* box-sizing: unset; khai báo lần nữa là để hủy */
+            width: 100px;
+            height: 100px;
+            background: green;
+            padding: 30px;
+            border: 3px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="padding padding1">box1</div>
+        <div class="padding padding2">box2</div>
+        <div class="padding padding3">box3</div>
+        <div class="padding padding4">box4</div>
+        <div class="padding padding5">box5</div>
+    </body>
+    </html>

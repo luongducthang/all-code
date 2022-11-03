@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.clear{
+    clear: both;
+}
+
+.row {
+    margin: 0 -8px;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-third{
+    margin-top: 20px;
+    width: 33.33%;
+    padding: 0 8px;
+}
+.col-half{
+    width: 50%;
+}
+
+.col-full {
+    width: 100%;
+    
+}
+
+.mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 0 24px;
+    display: none;
+    line-height: 46px;
+    
+}
+
+.mobile-menu-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+#band{
+ text-align: center;
+
+}
+
+.content-section{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    padding: 90px 0;
+    display: block;
+  }
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav li:hover ul.subnav {
+    display: block;
+}
+
+#nav > li{  /* sét riêng cho li của cấp 1 để li của các thẻ con bên trong ul.subnav không bị ảnh hưởng */
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+    list-style: none;
+    
+}
+
+#header {
+    background-color: #000;
+    height: 46px;
+}
+
+#nav li a i{
+    font-size: 11px;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #fff;
+    padding:0 30px;
+    line-height: 46px;
+    display: inline-block;  /* mặc định của thẻ a có chiều cao là display:inline không sét đc chiều cao */
+    text-transform: uppercase;
+}
+
+#nav .subnav li:hover,
+#nav > li:hover > a{  /* chỉ css riêng cho li và thẻ a của cấp 1 */
+     background-color: #ccc;
+    color: #000;
+}
+
+#nav ul.subnav li a{
+    color: #000;
+    text-transform: none;
+}
+
+#nav ul.subnav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    display: none;
+    box-shadow: 0 2px 3px #e9e9e9;
+}
+
+.search-btn {
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 24px;
+    line-height: 46px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: #f53;
+    color:#fff;
+}
+
+/* end #nav */
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background:url("/F8-SHOP/learn-code/blog-code/w3-web/asset/image/band.jpg") top center / cover no-repeat ;
+}
+
+#slider .text-conten {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 2;
+    font-size: 20px;
+}
+
+.section-heading{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+ .section-sub-heading{
+        padding: 20px 0;
+        opacity: 0.5;
+        font-style: italic;
+}
+
+ .about-text{
+        line-height: 1.5;
+        text-align: justify;
+}
+
+.section-heading,
+.section-sub-heading{
+text-align: center;
+}
+
+
+.member-list .member-name {
+    margin-bottom: 20px;
+}
+
+
+
+/* TOUR */
+
+#tour {
+    background-color: #000;
+    color: #fff;
+}
+
+#tour .section-heading,
+#tour .section-sub-heading{
+    color: #fff
+}
+
+#tour .sticket-list {
+    background-color: #fff;
+}
+
+#tour li {
+    color: #000;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 20px;
+}
+
+#tour span.sold-out {
+    margin-left: 20px;
+    background-color: #f53;
+    color: white;
+    padding: 5px;
+}
+
+#tour span.quantity {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    float: right;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+#tour .places-img {
+    width: 100%;
+    display: block;
+}
+
+#tour .places-body {
+    padding: 16px;
+    background-color: #fff;
+    color: #000;
+}
+
+#tour .places-heading {
+    font-weight: 600;
+}
+
+#tour .places-time {
+    font-size: 15px;
+    margin: 16px 0;
+    color: #ccc;
+}
+#tour .places-desc {
+    margin-bottom: 16px;
+}
+
+#tour .btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+#tour .btn {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 11px 15px;
+    cursor: pointer;
+}
+
+
+/* CONTACT */
+
+#contact .contact-form i {
+    width: 30px;
+    display: inline-block;
+}
+
+#contact .form-control{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#contact .btn {
+    float: right;
+    padding: 10px 15px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+#contact .btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+
+ /* MODAL */
+
+ .modal.open{
+    display: flex;
+ }
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: auto;
+    display: none;
+}
+
+.modal-container{
+    position: relative;
+    background-color: #fff;
+    width: 900px;
+    animation: modalFaceIn ease 0.6s;
+    margin: 0 20px;
+}
+
+
+@keyframes modalFaceIn{
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.modal-header{
+    background-color: #009688;
+    text-align: center;
+    padding: 26px 0;
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+}
+
+.modal-header i{
+    margin-right: 15px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 25px 20px;
+    font-size: 20px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-body{
+padding: 16px;
+}
+
+.modal-label{
+display: block;
+margin: 15px 0;
+}
+
+.modal-input{
+width: 100%;
+padding: 15px;
+}
+
+.buy-ticket{
+
+}
+
+.modal-pay{
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    padding: 16px 0;
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.modal-pay:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-footer{
+float: right;
+margin-bottom: 20px;
+}
+
+.modal-help a{
+margin: 16px 16px 0 0 ;
+color: #2196F3;
+}
+
+.map-section {
+    margin-top: 90px;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer {
+    text-align: center;
+    padding: 70px 0;
+    background-color: #f1f1f1;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #656565;
+    font-size: 20px;
+}
+
+#footer .copyring {
+    color: #656565;
+    margin-top: 10px;
+}
+
+#footer a:hover {
+    opacity: 0.5;
+}

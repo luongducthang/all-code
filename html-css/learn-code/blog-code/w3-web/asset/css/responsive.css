@@ -1,0 +1,111 @@
+    /* max-width:800px nhỏ hơn hoặc bằng 800px thì chạy */
+    /* min-width lớn hơn hoặc bằng 800px thì chạy */
+
+    /* PC */
+    @media(min-width: 64em) {
+        #header .mobile-menu-btn{
+            
+        }
+    }
+    /* TABLE */
+    @media(min-width:46.25em) and (max-width:63.9375em){
+        #footer .social{
+            font-size: 40px;
+        }
+
+        #footer .copyring a{
+            
+            padding: 15px 15px;
+            display: inline-block;
+        }
+
+        .contact-info {
+            line-height: 1.7;
+        }
+
+        #contact .btn{
+            margin-bottom: 20px;
+        }
+    }
+
+  
+    /* MOBILE */
+    @media(max-width:46.25em){
+      
+        #nav{
+            display: block;
+        }
+
+        #nav > li {
+            display: block;
+        }
+
+        #nav > li > a{
+            width: 100%;
+
+        }
+
+        #nav > li:first-child {
+            display: inline-block;
+        }
+
+        #nav ul.subnav{
+            display: block;
+            position: inherit;
+            background-color: #333;
+        }
+
+        #nav .subnav a{
+            color: #fff;
+            padding: 0 40px;
+            width: 100%;
+        }
+        
+        .content-section{
+            display: block;
+            padding: 90px 22px;
+        }
+
+        #header .search-btn{
+            display: none;
+        }
+
+        #header .mobile-menu-btn{
+            display: block;
+        }
+        
+        #header{
+            overflow: hidden;  
+        }
+
+        #content .member-item{
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        #content .member-img{
+            width: 60%;
+        }
+
+        .s-full-width,
+        .s-col-full{
+            width: 100%;
+        }
+
+        .contact-form{
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            line-height: 2;
+        }
+
+        #contact .btn{
+            margin-bottom: 20px;
+        }
+
+        #slider .text-conten{
+            display: none;
+        }
+
+    }

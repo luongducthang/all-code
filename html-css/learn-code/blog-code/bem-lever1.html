@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEM-lever1</title>
+
+  <style>
+    /* BEM là để đưa ra 1 quy chuẩn thống nhất class tự đặt ra , sử dụng khi làm trong 1 nhóm người code;
+       ## cú pháp viết BEM :
+       thêm --modifier
+       - .block (class cha)
+       - .block__element (class cha với các nội dung con của nó)
+       
+          VD
+
+       - .block--modifier (đặt class cha với 1 biệt danh tự đặt để hiểu nghĩa )
+                                - .block__element--modifier (class cha với các nội dung con của nó và thêm biệt danh để hiểu nghĩa ) */
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Helvetica Neue";
+      background-color: #f4f4f5;
+    }
+
+    body>div {
+      margin: auto;
+    }
+
+    /* ======= Buttons ======== */
+
+    /* Block */
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      padding: 12px 48px;
+      border-radius: 50px;
+      cursor: pointer;
+      min-width: 120px;
+      transition: opacity 0.2s ease;
+      user-select: none;
+    }
+
+    /* Modifier */
+    .btn--size-l {
+      padding: 16px 56px;
+    }
+
+    .btn--size-s {
+      padding: 8px 32px;
+    }
+
+    .btn:hover {
+      opacity: 0.8;
+    }
+
+    .btn+.btn {
+      margin-left: 16px;
+    }
+
+    .btn--success {
+      background-color: #71be34;
+    }
+
+    .btn--warn {
+      background-color: #ffb702;
+    }
+
+    .btn--danger {
+      background-color: #ff623d;
+    }
+
+    .btn--disabled,
+    .btn[disabled] {
+      opacity: 0.5 !important;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <div class="btn btn--success btn--size-s">Success</div>
+    <div class="btn btn--danger btn--size-s">Danger</div>
+  </div>
+
+  <div>
+    <div class="btn btn--success" disabled>Success</div>
+    <!--làm nút giả kiểu không bấm được-->
+    <div class="btn btn--danger">Danger</div>
+  </div>
+
+  <div>
+    <div class="btn btn--success btn--size-l">Success</div>
+    <div class="btn btn--danger btn--size-l">Danger</div>
+  </div>
+
+</body>
+
+</html>

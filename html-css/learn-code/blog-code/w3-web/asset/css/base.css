@@ -1,0 +1,206 @@
+:root {
+    --black-color: #000;
+    --text-color: #333;
+    --white-color: #fff;
+    --primary-color: #ee4d2d;
+    --border-color: #dbdbdb;
+    --star-gold-color: #ffce3e;
+    --header-height: 120px;
+    --navbar-height: 41px;
+    /* để tự tính trừ chiều cao không phải sửa height */
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height:46px;
+}
+
+* {
+    
+    box-sizing: inherit;
+    /* kế thừa từ thẻ chưa nó tính box-sizing */
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6em;
+    font-family: 'Roboto', sans-serif;
+    /* sans-serif là chữ không có chân */
+    box-sizing: border-box;
+}
+
+/* muốn làm chia dạng cột thì phải có [ gird cố định (chiều rộng)] row , colum */
+.gird {
+    /* với những màn hình có kích thước nhỏ hơn 1200px thì max-width sẽ làm cho nó vừa với màn hình */
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid_full-width {
+    width: 100%;
+}
+
+.gird__row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.gird__colum-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.gird__colum-2-4 {
+
+    width: 20%;
+    padding: 0 12px;
+
+}
+
+.gird__colum-10 {
+   
+    width: 83.3334%;
+}
+
+/* input-selector */
+
+.selector-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selector-input:hover .selector-input__list {
+    display: block;
+}
+
+
+.selector-input__label {
+    font-size: 1.4rem;
+}
+
+.header__search-select-icon {
+    font-size: 1.4rem;
+    color: #555;
+
+}
+
+.selector-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    list-style: none;
+    padding-left: 0;
+    display: none;
+    margin-top: 9px;
+    z-index: 1;
+}
+
+.selector-input__item {
+    padding: 10px 16px;
+}
+
+.selector-input__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 5px 0;
+}
+
+.selector-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* end - input-selector */
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 3px;
+}
+
+.pagination-item {
+    margin: 0 8px;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+}
+
+.pagination-item__icon {
+ font-size: 1.5rem;
+ color: #ccc;
+}
+
+
+
+@keyframes faceIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes GrowUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes growth {
+
+    /* transform:  scale(0%);
+       transform:  scale(100%); */
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}

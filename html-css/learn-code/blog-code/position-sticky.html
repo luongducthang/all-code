@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>sticky</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .dinh {
+            
+            width: 100%;
+            height: 100px;
+            background: black; 
+            margin-top: 50px;
+            position: sticky;
+            position: -webkit-sticky; /* để hỗ trợ cho trình duyệt safari */
+            top: 0;
+            /* sticky là làm menu dính */
+        }
+        .dinh h1 {
+            
+            color: white;
+            font-size: 50px;
+            text-align: center; /* căn giữa chữ */
+            line-height: 100px; /*căn giữa chiều cao sét chiều cao bằng với thẻ ngoài bọc nó */
+        }
+        body{
+            height: 2000px;
+        }
+
+    </style>
+    <body>
+        <div class="dinh"><h1>Stick</h1></div>
+    </body>
+    </html>

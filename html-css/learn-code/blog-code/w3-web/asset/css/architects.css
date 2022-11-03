@@ -1,0 +1,241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+/* class chung */
+
+.cup-size{
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-decoration: none;
+}
+
+.padding-push{
+    padding:64px 0 112px
+}
+
+.padding-content {
+    padding-left: 10px;
+    padding-right: 13px;
+}
+
+.margin-15{
+    margin:15px 0;
+}
+
+.margin-10{
+    margin:10px 0;
+}
+
+.font-weight{
+    font-weight: 400;
+}
+
+.float-left{
+    float: left;
+}
+.clear{
+    clear: both;
+}
+
+
+/* end class chung */
+
+
+.taskbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    height: 50px;
+    z-index: 1;
+    box-shadow: 0 2px 20px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 28%);
+}
+
+.sub-taskbar{
+    padding: 0 30px;
+    line-height: 50px;
+}
+
+.sub-taskbar .architects-taskbar{
+    float: left;
+}
+
+.sub-taskbar .menu-list{
+    float: right;
+    list-style: none;
+    display: inline-table;
+}
+
+
+.taskbar a {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000;
+}
+
+.taskbar a:hover {
+    background-color: #ccc;
+}
+
+.architects {
+    position: relative;
+}
+
+.text-architects {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    color: #fff;
+    font-size: 36px;
+
+}
+
+.architects b {
+    padding: 8px 16px;
+    background: rgb(34 5 5 / 68%);
+    margin-right: 10px;
+}
+
+.architects .architects-img {
+    width: 100%;
+}
+
+
+/* header */
+
+.header {
+    width: 1300px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 32px;
+}
+
+.header .col-two {
+    position: relative;
+    float: left;
+    width: 49.9%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 16px;
+
+
+}
+
+.header .text-renovated {
+    position: absolute;
+    top: 0;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header .title {
+   
+    padding: 32px 13px 32px 10px;
+
+}
+
+.header .text-title {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* About */
+
+.about .contact-information {
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+.about .contact-information:hover {
+    background-color: #ccc;
+}
+
+
+/* Contact */
+
+.contact .information-h3 {
+    color: #ccc;
+}
+
+.contact .import-information:first-child{
+    margin: 0;
+}
+
+.contact .import-information {
+    display: block;
+    width: 100%;
+    margin: 16px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact .send-message {
+    padding: 8px 16px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.contact .send-message:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+/* Footer */
+
+.footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+}
+
+.footer p{
+    margin: 10px;
+}
+
+.footer a {
+    color: #fff;
+    margin-left: 10px;
+}
+.footer a:hover {
+    color: #4CAF50;
+}
+
+@media(min-width:1400px){
+    .header .col-two{
+        width: 25%;
+    }
+}
+
+@media(max-width:600px){
+    .header .col-two{
+        width: 100%;
+    }
+
+    span.text-main{
+        display: none;
+    }
+
+    .sub-taskbar .menu-list{
+        display: none;
+    }
+}

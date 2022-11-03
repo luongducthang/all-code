@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+    <style>
+        html body{
+            margin: 0;
+        }
+        .background1{
+          /* để hiện ảnh phải cho height: 100vh; */
+          /* rgba là 3 màu và hiên thị trong suôt */
+           /* linear-gradient(0deg, màu ,màu) tọa đô và chuyên đôỉ màu */
+           width: 100%;
+          height: 100vh;
+
+          background-image: linear-gradient(0deg ,rgba( 255, 255 ,0 ,0.5),  rgba( 22, 52 ,10 ,0.5)),       
+          url(https://yt3.ggpht.com/ytc/AMLnZu_fi145MXdC2Hm1D6p5k5mrMn174H9XchApsa34GA=s900-c-k-c0x00ffffff-no-rj);
+          /* url(https://i.pinimg.com/280x280_RS/e4/53/ca/e453ca86f32ea6ceeca83a863eb7df7d.jpg), ảnh trên đè ảnh dươí   */ 
+
+            border: 20px dashed gray;
+            box-sizing: border-box;
+            background-origin: border-box;
+
+            /* background-origin: border-box là đổ từ border vào thì border sẽ đè lên ảnh                                */
+            background-size: 70% 100%;
+
+             /* chiều ngang 70% dọc 100%  cho px nhỏ đê anh phóng lây nên*/
+             /* contain là lấy kích thước chiều dọc ảnh để hiển thị 
+             cover là lấp đầy màn hình không hở */
+
+
+
+            background-repeat: no-repeat;
+
+             /* là làm mất đi cái lặp lại*/
+            /* repeat là lăp lại
+            repeat-x lap lai chieu ngang
+            repeat-y lap lai chieu doc */
+        }
+        
+    </style>
+<body>
+    <div class="background1"></div>
+    <!-- <div class="background2"></div>
+    <div class="background3"></div>
+    <div class="background4"></div>
+    <div class="background5"></div> -->
+</body>
+</html> 
+ 

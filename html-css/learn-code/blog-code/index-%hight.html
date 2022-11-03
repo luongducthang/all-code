@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ sử dụng đơn vị % #1</title>
+    <style>
+/* Khi cần tăng/giảm font-size cho tất cả, chỉ cần sửa 1 nơi:phụ thuộc thẻ html */
+/* mặc định các thẻ có height: auto, chiều cao sẽ tự động thay đổi khi nội dung bên trong nó tăng lên.  */
+   /* .box-1 không có chiều cao, vì .parent-1 mặc định height: auto */
+.parent-1 .box-1 {
+    height: 30%;
+    background-color: green;
+}
+
+.parent-2 {
+    /* Hãy thử comment height lại để thấy sự thay đổi */
+    height: 400px;
+    background-color: #ccc;
+}
+
+/* .box-2 có chiều cao, vì .parent-2 được set height */
+.parent-2 .box-2 {
+    /* 30% của 400px */
+    height: 30%;
+    background-color: orange;
+}
+    </style>
+</head>
+<body>
+    <div class="parent-1">
+        <div class="box-1">BOX 1</div>
+    </div>
+    
+    <div class="parent-2">
+        <div class="box-2">BOX 2</div>
+    </div>
+</body>
+</html>

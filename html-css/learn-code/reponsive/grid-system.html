@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống lưới</title>
+    <link rel="stylesheet" href="./css/grid-system.css">
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            background-color: orange;
+            text-align: center;
+        }
+        h1{
+            padding: 100px 0;
+            font-size: 50px;
+            color: #fff;
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- MỌI KÍCH THƯỚC THAY ĐỔI THEO MÀN HÌNH-->
+
+    <!-- 4 loại lưới
+    - Lưới nhiều cột
+    - Lưới một cột
+    - Lưới module
+    - Lưới đường cơ sở 
+
+Responsive web design
+    - Gird: chứa  12 cột
+    - Row: khối bọc các cột
+    - Column: từng cột
+    - Gutter: tạo khoảng cách giữa của 2 cột -->
+
+<!-- thành phần chính gồm:
+    1. column - cột
+    Độ rộng sử dụng cho đơn vị % để chia (VD: PC 12|16 cột , Tablet 8 cột , Mobile 4 cột)
+
+    2. Gutter - Đường ngăn cách
+    Là khoảng cách 2 phía của 1 cột, độ rộng của đường ngăn có thay đổi phù hợp với độ rộng màn hình
+
+    3. Margin - Phần lề
+    Là khoảng cách 2 bên trái/phải của màn hình chính.Phần lề lớn thích hợp với màn hình PC , phần nhỏ kết hợp với Tablet ,Mobile
+
+thành phần chính (làm việc với CSS)
+    1. Gird - lưới (chứa ROW và COLUMN)
+    2. Row - Dòng (Dòng - chiều ngang chứa COLUMN)
+    3. Column - Cột(là nội dung bị chia trên website) -->
+
+
+<!-- CHI TIẾT HƠN
+        1. Gird - lưới (1200PX) 
+        Trước là 1240px 960px nhưng giờ độ phân giải màn hình ngày càng cao phổ biến là 1280px 1024px, nên mới dùng độ rồng lưới 1200px
+        1200 chia hết cho 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 40, 48, 60, 80, 120, 150, 200, 240 và 400. 
+
+        2. ROW - chiều ngang để chứa column
+        Chứa giúp column nằm theo chiều ngang
+        Khi tổng chiều ngang column quá kích thước của ROW thì COLUMN tự xuống dòng
+        Loại bỏ khoảng PADDING giữa ngăn cách do Gutter tạo ra
+
+        3. 
+    -->
+    <div class="gird wide container">
+        <div class="row">
+            <h1>Gird-system</h1>
+            <h1>Gird-system</h1>
+            <h1>Gird-system</h1>
+        </div>
+        
+    </div>
+</body>
+
+</html>

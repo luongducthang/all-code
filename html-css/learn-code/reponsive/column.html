@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- thư viện để ở trên link css để ở dưới -->
+  <link rel="stylesheet" href="./css/column.css">
+  <style>
+    /* * {
+        box-sizing: border-box;
+      }
+
+      .col {
+        text-align: center;
+        background-color: #ccc;
+        background-clip: content-box;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      } */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background-color: antiquewhite;
+      min-height: 100vh;
+    }
+
+    .my-column {
+      text-align: center;
+      min-height: 50vh;
+      background-color: orange;
+    }
+
+    .category {
+      background: yellow;
+      height: 250px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1023px) {
+      .my-column {
+        margin-top: 20px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .my-column {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>căn margin-left </h1>
+
+  <div class="grid wide container">
+    <div class="row">
+      <div class="col l-4 m-5 c-12 l-o-2 m-o-1">
+        <div class="my-column">
+          <h1>Column2</h1>
+        </div>
+      </div>
+
+      <div class="col l-4 m-5 c-12">
+        <div class="my-column">
+          <h1>Column2</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h1>thu gọn khối</h1>
+
+  <div class="grid wide container">
+    <div class="row">
+      <div class="col l-3 m-6 c-12">
+        <div class="my-column">
+          <h1>Column1</h1>
+        </div>
+
+      </div>
+      <div class="col l-3 m-6 c-12">
+        <div class="my-column">
+          <h1>Column1</h1>
+        </div>
+
+      </div>
+      <div class="col l-3 m-6 c-12">
+        <div class="my-column">
+          <h1>Column1</h1>
+        </div>
+
+      </div>
+
+      <div class="col l-3 m-6 c-12">
+        <div class="my-column">
+          <h1>Column1</h1>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+<h1>kiểu mẫu item</h1>
+
+      <div class="grid wide container">
+        <div class="row">
+
+          <div class="col  l-3 m-0 c-0">
+            <div class="category">
+              <ul>
+                <li>Column1</li>
+                <li>Column2</li>
+                <li>Column3</li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          <div class="col l-9 m-12 c-12">
+            <div class="row">
+
+              <div class="col l-4 m-6 c-12 ">
+                <div class="my-column">
+                  <h1>Column2</h1>
+                </div>
+              </div>
+
+              <div class="col l-4 m-6 c-12">
+                <div class="my-column">
+                  <h1>Column2</h1>
+                </div>
+              </div>
+
+              <div class="col l-4 m-6 c-12">
+                <div class="my-column">
+                  <h1>Column2</h1>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+<h1>làm kín khoảng cách</h1>
+
+      <div class="grid wide container">
+        <div class="row  no-gutters">
+
+          <div class="col l-4 m-6 c-12">
+            <div class="my-column">
+              <h1>Column1</h1>
+            </div>
+          </div>
+
+          <div class="col l-4 m-6 c-12">
+            <div class="my-column">
+              <h1>Column1</h1>
+            </div>
+          </div>
+
+          <div class="col l-4 m-6 c-12">
+            <div class="my-column">
+              <h1>Column1</h1>
+            </div>
+          </div>
+    
+          <div class="col l-4 m-6 c-12">
+            <div class="my-column">
+              <h1>Column1</h1>
+            </div>
+          </div>
+
+          <div class="col l-4 m-6 c-12">
+            <div class="my-column">
+              <h1>Column1</h1>
+            </div>
+          </div>
+    
+          <div class="col l-4 m-6 c-12">
+            <div class="my-column">
+              <h1>Column1</h1>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+</body>
+</html>

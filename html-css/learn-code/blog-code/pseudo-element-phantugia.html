@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>phần tử giả</title>
+    <style>
+        /* content là để giúp phần tử giả hoạt động */
+        /* phần tử giả không có tính chất khối như thẻ div thì phải thêm display:block */
+        .before1::before {
+            content: "xin chào trước"; 
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(224, 85, 206);
+        }
+        .before1::after {
+            content: "xin chào sau"; 
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(243, 81, 181);
+        }
+        .before1{
+            height: 100%;
+            width: 100%;
+            background: black;
+        }
+
+        /* first-letter chữ đầu tiên */
+        .box-1::first-letter{
+            font-size: 50px;
+        }
+
+        /* first line là css dòng đầu tiên */
+        .box-2::first-line{
+            color: red;
+           
+        }
+        
+
+        /* ::selection là bôi đen màu   */
+        .box-3::selection{
+            background-color: violet;
+            color: white; 
+        }
+        .box-3{
+            padding: 20px 20px;
+        }
+
+    </style>
+    
+    </head>
+   
+        <body>
+            <div class="before1"></div> <!--thẻ div trình duyệt đã gắn sẵn display:block;-->  
+            <div class="parent-1">
+    <div class="box-1">BOX 1</div>
+</div>
+<div class="parent-2">
+    <div class="box-2">BOX 2</div>
+</div>
+<div class="parent-3">
+    <div class="box-3">BOX 3</div>
+</div>
+        </body>
+    </html>

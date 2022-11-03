@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--khai báo loại tài liệu này là gì-->
+<html>
+
+<head>
+	<title>NET - SHOP</title>
+	<meta charset="utf-8">
+	<!--hỗ trợ hển thị tiếng việt trong trang-->
+	<link rel="stylesheet" href="asset/css/style.css">
+	<div>
+		<!--tạo thành khối bao quanh-->
+		<style>
+			/* new file rồi ấn thư mục cứ cách */
+			/* có 3 kiểu viết css 
+								1 là internal <viết trong nội bộ> là viết styde trong html
+								2 là external <tạo file khác viết bên ngoài> 
+								3 là inline <viết trong thẻ mở giống atributte bằng styde>
+							*/
+			/* độ ưu tiên trong css */
+			/* 1 inline 
+								2 #id
+								3 class
+    4 gọi tên
+    5 gọi truyền tên 
+    6 gọi chung {* hoặc html}
+    7 thêm !import vao trong thuộc tính  
+    * là thẻ ap dụng tất cả
+    html{} là thẻ để các thẻ bên trong nó thừa hưởng*/
+
+			/* các đơn vi trong css
+(thẻ tuyệt đối)
+    px thì co màn hình không thay đổi 
+    (vw là with) là làm cố định chiều rộng màn hình
+    (vh là height) là làm cố định chiều cao màn hình
+(thẻ tương đối)
+    % là phụ thuộc vào thẻ chứa nó (vd ở thẻ  body) hay đc dùng để reponsiver
+    rem phụ thuộc vào thẻ html (thường sử dụng)
+    em phụ thuộc vào thẻ gần nhất chứa nó (vd div bọc h1)
+width và height, khi đặt theo % sẽ tỉ lệ vào thẻ mà nó phụ thuộc, mặc định là thẻ cha trực tiếp của nó
+ */
+
+
+			:root {
+				/*(lớp giả) */
+				--tenbien: red;
+				/* biến thì sử dụng đc toàn bộ trọng các thẻ */
+			}
+
+			#the-ten-rieng {
+				color: var(--tenbien);
+				/* ví dụ đặt màu chủ đạo*/
+				font-size: 50px;
+			}
+
+			.the-nhom1 {
+				color: blue !important;
+			}
+
+			.parent .the-nhom3 {
+				font-size: 20px;
+			}
+		</style>
+</head>
+
+
+<body>
+	<!--thẻ body có margin mặc định là 8px  * 
+			(cách khắc phục)
+			margin: 0; /* Loại bỏ margin mặc định */
+			padding: 0; /* Loại bỏ padding mặc định */
+		-->
+	<!-- thẻ id là định danh duy nhất không đc đặt 2 thẻ nếu dùng javascrip mà muốn chọn thì sẽ lỗi nên phải dùng class -->
+	<!-- Trong cùng 1 page HTML, mỗi ID cần là duy nhất. Đây là nguyên tắc của việc sử dụng ID, nếu vi phạm sẽ gặp cảnh báo trong tab Console của dev tool, và Javascript sẽ không lấy ra được cả 2 phần tử có dùng ID -->
+	<div class="parent">
+		<h1 id="the-ten-rieng"> tiêu đề 1</h1>
+		<h1 class="the-nhom1"> tiêu đề 2</h1>
+		<h1 class="the-nhom2"> tiêu đề 3</h1>
+		<h1 class="the-nhom3"> tiêu đề 4</h1>
+		<h1 class="the-nhom4"> tiêu đề 5</h1>
+		<p></p>
+	</div>
+
+	<img src="https://tpos.vn/uploads/images/220627172342_1926x918-tpos.png" alt="lỗi">
+	<a href="https://tpos.vn/blog/dau-tu-kinh-doanh-nha-tro-t120556.html">thẻ link</a>
+	<ul>
+		<li style="font-size:10px;">so1</li>
+		<li>so2</li>
+	</ul>
+
+	<input type="text">
+	<!--thẻ nhập theo các kiểu-->
+	<table>
+		<thead>
+			<!--đầu bảng-->
+			<th>SĐT</th>
+			<!--tiêu đề-->
+			<th>Tên</th>
+			<th>Địa chỉ</th>
+		</thead>
+		<tbody>
+			<!--thân bảng-->
+			<tr>
+				<!--dòng-->
+				<td>123</td>
+				<td>thắng</td>
+				<td>hà nam</td>
+			</tr>
+			<tr>
+				<!--dòng-->
+				<td>123</td>
+				<td>thắng</td>
+				<td>hà nam</td>
+			</tr>
+			<tr>
+				<!--dòng-->
+				<td>123</td>
+				<td>thắng</td>
+				<td>hà nam</td>
+			</tr>
+		</tbody>
+	</table>
+	<h1 title="hiển thị di chuột" style="color:red">Attribute</h1>
+	<!--thuộc tính nằm trong thẻ mở-->
+
+</body>
+</div>
+
+</html>

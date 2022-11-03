@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <title>BEM-lever2</title>
+
+    <style>
+        * {
+
+            padding: 0;
+            margin: 0;
+        }
+
+
+        #toast {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+
+        }
+
+        .toast {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-left: 3px solid;
+            box-shadow: 3px 0px 10px rgba(156, 147, 147, 0.5);
+            animation: inlideInleft ease .3s, fadeOut linear 1s 2s forwards;
+            transition: all linear 0.3s;
+        }
+
+        @keyframes inlideInleft {
+            from {
+                opacity: 0;
+                transform: translateX(calc(100% + 10px));
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+            }
+        }
+
+        .toast--success {
+            border-left: 3px solid green;
+        }
+
+        .toast--success .toast__icon {
+            color: green;
+        }
+
+        .toast--info {
+            border-left: 3px solid blue;
+        }
+
+        .toast--info .toast__icon {
+            color: blue;
+
+        }
+
+        .toast--warning {
+            border-left: 3px solid yellow
+        }
+
+        .toast--warning .toast__icon {
+            color: yellow;
+            ;
+        }
+
+        .toast--error {
+            border-left: 3px solid red;
+        }
+
+        .toast--error .toast__icon {
+            color: red;
+
+        }
+
+        .toast__body {
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        .toast--error .toast__title {
+            color: red;
+        }
+
+        .toast--success .toast__title {
+            color: green;
+        }
+
+        .toast--warning .toast__title {
+            color:yellow
+        }
+
+        .toast--info .toast__title {
+            color: blue;
+        }
+
+        .toast__msg {
+            color: rgb(161, 141, 141);
+        }
+
+        .toast__close {
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .btn+.btn {
+            margin-top: 50px;
+        }
+
+        .btn {
+            margin: 20px;
+            padding: 20px;
+            width: 100px;
+            cursor: pointer;
+            
+        }
+
+        .btn--success {
+            background-color: greenyellow;
+        }
+
+        .btn--error {
+            background-color: red;
+        }
+
+        .btn--warning {
+            background-color: yellow;
+        }
+
+        .btn--info {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="toast"></div>
+    <div>
+        <div onclick="showSuccessToast();" class="btn btn--success">Show success</div>
+        <div onclick="showErrorToast();" class="btn btn--error">Show error</div>
+        <div onclick="showWarningToast();" class="btn btn--warning">Show warning</div>
+        <div onclick="showInfoToast();" class="btn btn--info">Show info</div>
+    </div>
+    <script>
+
+        function toast({
+            title = '',
+            message = '',
+            type = 'info',
+            duration = 3000
+        }) {
+            const main = document.getElementById('toast');
+            if (main) {
+                const toast = document.createElement('div');
+
+                // tự động xoá 
+                const autoRemoverId = setTimeout(function () {
+                    main.removeChild(toast);
+                }, duration + 1000);
+
+                // xoá khi click vào X
+                toast.onclick = function (e) {
+                    if (e.target.closest('.toast__close')) {
+                        main.removeChild(toast);
+                        clearTimeout(autoRemoverId);
+                    }
+                }
+
+                const icons = {
+                    success: "fas fa-check-circle",
+                    info: "fas fa-info-circle",
+                    warning: "fas fa-exclamation",
+                  
+                    error: "fas fa-exclamation-circle"
+                };
+                const icon = icons[type];
+                const delay = (duration / 1000).toFixed(2);
+                toast.classList.add('toast', `toast--${type}`);
+                toast.style.animation = `inlideInleft ease .2s, fadeOut linear 1s ${delay}s forwards`;
+                toast.innerHTML = `
+
+                        <div class="toast__icon">
+                            <i class="${icon}"></i>
+                        </div>
+
+                        <div class="toast__body">
+                            <h3 class="toast__title">${title}</h3>
+                            <p class="toast__msg">${message}</p>
+                        </div>
+
+                        <div class="toast__close">
+                            <i class="fa fa-close"></i>
+                        </div> `;
+
+                main.appendChild(toast);
+            }
+        }
+
+
+
+
+        function showSuccessToast() {
+            toast({
+                title: 'Success',
+                message: '123123321The table below shows all Font Awesome Web Application icons:',
+                type: 'success',
+                duration: 5000
+            });
+        }
+
+
+        function showErrorToast() {
+            toast({
+                title: 'Error',
+                message: ' the table below shows all Font Awesome Web Application icons:',
+                type: 'error',
+                duration: 5000
+            });
+        }
+
+        function showWarningToast() {
+            toast({
+                title: 'Warning',
+                message: ' the table below shows all Font Awesome Web Application icons:',
+                type: 'warning',
+                duration: 5000
+            });
+        }
+
+        function showInfoToast() {
+            toast({
+                title: 'Info',
+                message: ' the table below shows all Font Awesome Web Application icons:',
+                type: 'info',
+                duration: 5000
+            });
+        }
+
+
+
+    </script>
+
+
+
+
+
+    <!-- success -->
+    <!-- <div id="toast">
+        <div class="toast  toast__success">
+
+            <div class="toast__icon">
+                <i class="	fa fa-calendar-check-o"></i>
+            </div>
+
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast__msg">The table below shows all Font Awesome Web Application icons:</p>
+            </div>
+
+            <div class="toast__close">
+                <i class="fa fa-close"></i>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- Info -->
+
+    <!-- <div class="toast toast__info">
+
+        <div class="toast__icon">
+            <i class="	fa fa-calendar-check-o"></i>
+        </div>
+
+        <div class="toast__body">
+            <h3 class="toast__title">Info</h3>
+            <p class="toast__msg">The table below shows all Font Awesome Web Application icons:</p>
+        </div>
+
+        <div class="toast__close">
+            <i class="fa fa-close"></i>
+        </div>
+    </div> -->
+
+    <!-- warning -->
+
+    <!-- <div class="toast toast__warning">
+
+        <div class="toast__icon">
+            <i class="	fa fa-calendar-check-o"></i>
+        </div>
+
+        <div class="toast__body">
+            <h3 class="toast__title">Warning </h3>
+            <p class="toast__msg">The table below shows all Font Awesome Web Application icons:</p>
+        </div>
+
+        <div class="toast__close">
+            <i class="fa fa-close"></i>
+        </div>
+    </div> -->
+
+    <!-- error -->
+
+    <!-- <div class="toast toast__error">
+
+        <div class="toast__icon">
+            <i class="	fa fa-calendar-check-o"></i>
+        </div>
+
+        <div class="toast__body">
+            <h3 class="toast__title">Error </h3>
+            <p class="toast__msg">The table below shows all Font Awesome Web Application icons:</p>
+        </div>
+
+        <div class="toast__close">
+            <i class="fa fa-close"></i>
+        </div>
+    </div> -->
+
+
+
+</body>
+
+
+</html>

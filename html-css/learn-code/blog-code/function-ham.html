@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hàm</title>
+    <style>
+        p.class{
+            width: calc(80% + 20px); /* hàm calc( tính toán) để cộng giá trị tương đối với tuyệt đối */
+            height: 100vh;
+            background: rgb(193, 235, 236); /* hàm  rgb() để pha màu */
+        }
+        a::after{
+            content:"("attr(href)")" ; /* hàm attribul để thay đổi nguồn trang */
+        }
+        .class::after{
+            content: attr(data-title); /*lấy giá trị trực tiếp*/
+        } 
+    </style>
+    </head>
+<body>
+
+    <p class="class" data-title="lấy giá trị trực tiếp"></p>
+    <a href="https://www.youtube.com.vn/">trang chủ youtube</a>
+<p class="class-1">Đoạn văn 1.2</p>
+
+<p class="class-2 class-3">Đoạn văn 2.1</p>
+<p class="class-2 class-3">Đoạn văn 2.2</p>
+
+<div class="class-4">
+<p class="class-5">Đoạn văn 3</p>
+</div>
+
+</body>
+</html>
